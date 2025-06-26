@@ -1,0 +1,361 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Users\\91961\\source\\repos\\MassTechAprilBatch2025\\Masstech Tutorials Core MVC\\DineMasterApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B75122E4-A577-40FC-9ECD-C5AFEFB02B4A}|DineMasterApi\\DineMasterApi.csproj|e:\\users\\91961\\source\\repos\\masstechaprilbatch2025\\masstech tutorials core mvc\\dinemasterapi\\dinemasterapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B75122E4-A577-40FC-9ECD-C5AFEFB02B4A}|DineMasterApi\\DineMasterApi.csproj|solutionrelative:dinemasterapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B75122E4-A577-40FC-9ECD-C5AFEFB02B4A}|DineMasterApi\\DineMasterApi.csproj|e:\\users\\91961\\source\\repos\\masstechaprilbatch2025\\masstech tutorials core mvc\\dinemasterapi\\dinemasterapi\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B75122E4-A577-40FC-9ECD-C5AFEFB02B4A}|DineMasterApi\\DineMasterApi.csproj|solutionrelative:dinemasterapi\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B75122E4-A577-40FC-9ECD-C5AFEFB02B4A}|DineMasterApi\\DineMasterApi.csproj|e:\\users\\91961\\source\\repos\\masstechaprilbatch2025\\masstech tutorials core mvc\\dinemasterapi\\dinemasterapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B75122E4-A577-40FC-9ECD-C5AFEFB02B4A}|DineMasterApi\\DineMasterApi.csproj|solutionrelative:dinemasterapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B75122E4-A577-40FC-9ECD-C5AFEFB02B4A}|DineMasterApi\\DineMasterApi.csproj|e:\\users\\91961\\source\\repos\\masstechaprilbatch2025\\masstech tutorials core mvc\\dinemasterapi\\dinemasterapi\\models\\deliveryotp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B75122E4-A577-40FC-9ECD-C5AFEFB02B4A}|DineMasterApi\\DineMasterApi.csproj|solutionrelative:dinemasterapi\\models\\deliveryotp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B75122E4-A577-40FC-9ECD-C5AFEFB02B4A}|DineMasterApi\\DineMasterApi.csproj|e:\\users\\91961\\source\\repos\\masstechaprilbatch2025\\masstech tutorials core mvc\\dinemasterapi\\dinemasterapi\\models\\deliverytracking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B75122E4-A577-40FC-9ECD-C5AFEFB02B4A}|DineMasterApi\\DineMasterApi.csproj|solutionrelative:dinemasterapi\\models\\deliverytracking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B75122E4-A577-40FC-9ECD-C5AFEFB02B4A}|DineMasterApi\\DineMasterApi.csproj|e:\\users\\91961\\source\\repos\\masstechaprilbatch2025\\masstech tutorials core mvc\\dinemasterapi\\dinemasterapi\\models\\deliveryaddress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B75122E4-A577-40FC-9ECD-C5AFEFB02B4A}|DineMasterApi\\DineMasterApi.csproj|solutionrelative:dinemasterapi\\models\\deliveryaddress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B75122E4-A577-40FC-9ECD-C5AFEFB02B4A}|DineMasterApi\\DineMasterApi.csproj|e:\\users\\91961\\source\\repos\\masstechaprilbatch2025\\masstech tutorials core mvc\\dinemasterapi\\dinemasterapi\\models\\expense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B75122E4-A577-40FC-9ECD-C5AFEFB02B4A}|DineMasterApi\\DineMasterApi.csproj|solutionrelative:dinemasterapi\\models\\expense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B75122E4-A577-40FC-9ECD-C5AFEFB02B4A}|DineMasterApi\\DineMasterApi.csproj|e:\\users\\91961\\source\\repos\\masstechaprilbatch2025\\masstech tutorials core mvc\\dinemasterapi\\dinemasterapi\\models\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B75122E4-A577-40FC-9ECD-C5AFEFB02B4A}|DineMasterApi\\DineMasterApi.csproj|solutionrelative:dinemasterapi\\models\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B75122E4-A577-40FC-9ECD-C5AFEFB02B4A}|DineMasterApi\\DineMasterApi.csproj|e:\\users\\91961\\source\\repos\\masstechaprilbatch2025\\masstech tutorials core mvc\\dinemasterapi\\dinemasterapi\\models\\bill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B75122E4-A577-40FC-9ECD-C5AFEFB02B4A}|DineMasterApi\\DineMasterApi.csproj|solutionrelative:dinemasterapi\\models\\bill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B75122E4-A577-40FC-9ECD-C5AFEFB02B4A}|DineMasterApi\\DineMasterApi.csproj|e:\\users\\91961\\source\\repos\\masstechaprilbatch2025\\masstech tutorials core mvc\\dinemasterapi\\dinemasterapi\\models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B75122E4-A577-40FC-9ECD-C5AFEFB02B4A}|DineMasterApi\\DineMasterApi.csproj|solutionrelative:dinemasterapi\\models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B75122E4-A577-40FC-9ECD-C5AFEFB02B4A}|DineMasterApi\\DineMasterApi.csproj|e:\\users\\91961\\source\\repos\\masstechaprilbatch2025\\masstech tutorials core mvc\\dinemasterapi\\dinemasterapi\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B75122E4-A577-40FC-9ECD-C5AFEFB02B4A}|DineMasterApi\\DineMasterApi.csproj|solutionrelative:dinemasterapi\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B75122E4-A577-40FC-9ECD-C5AFEFB02B4A}|DineMasterApi\\DineMasterApi.csproj|e:\\users\\91961\\source\\repos\\masstechaprilbatch2025\\masstech tutorials core mvc\\dinemasterapi\\dinemasterapi\\models\\menuitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B75122E4-A577-40FC-9ECD-C5AFEFB02B4A}|DineMasterApi\\DineMasterApi.csproj|solutionrelative:dinemasterapi\\models\\menuitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B75122E4-A577-40FC-9ECD-C5AFEFB02B4A}|DineMasterApi\\DineMasterApi.csproj|e:\\users\\91961\\source\\repos\\masstechaprilbatch2025\\masstech tutorials core mvc\\dinemasterapi\\dinemasterapi\\models\\menucategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B75122E4-A577-40FC-9ECD-C5AFEFB02B4A}|DineMasterApi\\DineMasterApi.csproj|solutionrelative:dinemasterapi\\models\\menucategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B75122E4-A577-40FC-9ECD-C5AFEFB02B4A}|DineMasterApi\\DineMasterApi.csproj|e:\\users\\91961\\source\\repos\\masstechaprilbatch2025\\masstech tutorials core mvc\\dinemasterapi\\dinemasterapi\\models\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B75122E4-A577-40FC-9ECD-C5AFEFB02B4A}|DineMasterApi\\DineMasterApi.csproj|solutionrelative:dinemasterapi\\models\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B75122E4-A577-40FC-9ECD-C5AFEFB02B4A}|DineMasterApi\\DineMasterApi.csproj|e:\\users\\91961\\source\\repos\\masstechaprilbatch2025\\masstech tutorials core mvc\\dinemasterapi\\dinemasterapi\\models\\diningtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B75122E4-A577-40FC-9ECD-C5AFEFB02B4A}|DineMasterApi\\DineMasterApi.csproj|solutionrelative:dinemasterapi\\models\\diningtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B75122E4-A577-40FC-9ECD-C5AFEFB02B4A}|DineMasterApi\\DineMasterApi.csproj|e:\\users\\91961\\source\\repos\\masstechaprilbatch2025\\masstech tutorials core mvc\\dinemasterapi\\dinemasterapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B75122E4-A577-40FC-9ECD-C5AFEFB02B4A}|DineMasterApi\\DineMasterApi.csproj|solutionrelative:dinemasterapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B75122E4-A577-40FC-9ECD-C5AFEFB02B4A}|DineMasterApi\\DineMasterApi.csproj|e:\\users\\91961\\source\\repos\\masstechaprilbatch2025\\masstech tutorials core mvc\\dinemasterapi\\dinemasterapi\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B75122E4-A577-40FC-9ECD-C5AFEFB02B4A}|DineMasterApi\\DineMasterApi.csproj|solutionrelative:dinemasterapi\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1578389772:0:{83107a3e-496a-485e-b455-16ddb978e55e}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Users\\91961\\source\\repos\\MassTechAprilBatch2025\\Masstech Tutorials Core MVC\\DineMasterApi\\DineMasterApi\\Program.cs",
+              "RelativeDocumentMoniker": "DineMasterApi\\Program.cs",
+              "ToolTip": "E:\\Users\\91961\\source\\repos\\MassTechAprilBatch2025\\Masstech Tutorials Core MVC\\DineMasterApi\\DineMasterApi\\Program.cs",
+              "RelativeToolTip": "DineMasterApi\\Program.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABsAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T15:23:14.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\Users\\91961\\source\\repos\\MassTechAprilBatch2025\\Masstech Tutorials Core MVC\\DineMasterApi\\DineMasterApi\\appsettings.json",
+              "RelativeDocumentMoniker": "DineMasterApi\\appsettings.json",
+              "ToolTip": "E:\\Users\\91961\\source\\repos\\MassTechAprilBatch2025\\Masstech Tutorials Core MVC\\DineMasterApi\\DineMasterApi\\appsettings.json",
+              "RelativeToolTip": "DineMasterApi\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-26T15:22:55.32Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DeliveryOTP.cs",
+              "DocumentMoniker": "E:\\Users\\91961\\source\\repos\\MassTechAprilBatch2025\\Masstech Tutorials Core MVC\\DineMasterApi\\DineMasterApi\\Models\\DeliveryOTP.cs",
+              "RelativeDocumentMoniker": "DineMasterApi\\Models\\DeliveryOTP.cs",
+              "ToolTip": "E:\\Users\\91961\\source\\repos\\MassTechAprilBatch2025\\Masstech Tutorials Core MVC\\DineMasterApi\\DineMasterApi\\Models\\DeliveryOTP.cs",
+              "RelativeToolTip": "DineMasterApi\\Models\\DeliveryOTP.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T15:19:03.937Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DeliveryTracking.cs",
+              "DocumentMoniker": "E:\\Users\\91961\\source\\repos\\MassTechAprilBatch2025\\Masstech Tutorials Core MVC\\DineMasterApi\\DineMasterApi\\Models\\DeliveryTracking.cs",
+              "RelativeDocumentMoniker": "DineMasterApi\\Models\\DeliveryTracking.cs",
+              "ToolTip": "E:\\Users\\91961\\source\\repos\\MassTechAprilBatch2025\\Masstech Tutorials Core MVC\\DineMasterApi\\DineMasterApi\\Models\\DeliveryTracking.cs",
+              "RelativeToolTip": "DineMasterApi\\Models\\DeliveryTracking.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T15:18:46.166Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DeliveryAddress.cs",
+              "DocumentMoniker": "E:\\Users\\91961\\source\\repos\\MassTechAprilBatch2025\\Masstech Tutorials Core MVC\\DineMasterApi\\DineMasterApi\\Models\\DeliveryAddress.cs",
+              "RelativeDocumentMoniker": "DineMasterApi\\Models\\DeliveryAddress.cs",
+              "ToolTip": "E:\\Users\\91961\\source\\repos\\MassTechAprilBatch2025\\Masstech Tutorials Core MVC\\DineMasterApi\\DineMasterApi\\Models\\DeliveryAddress.cs",
+              "RelativeToolTip": "DineMasterApi\\Models\\DeliveryAddress.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBoAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T15:18:34.753Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Expense.cs",
+              "DocumentMoniker": "E:\\Users\\91961\\source\\repos\\MassTechAprilBatch2025\\Masstech Tutorials Core MVC\\DineMasterApi\\DineMasterApi\\Models\\Expense.cs",
+              "RelativeDocumentMoniker": "DineMasterApi\\Models\\Expense.cs",
+              "ToolTip": "E:\\Users\\91961\\source\\repos\\MassTechAprilBatch2025\\Masstech Tutorials Core MVC\\DineMasterApi\\DineMasterApi\\Models\\Expense.cs",
+              "RelativeToolTip": "DineMasterApi\\Models\\Expense.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T15:18:20.735Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Inventory.cs",
+              "DocumentMoniker": "E:\\Users\\91961\\source\\repos\\MassTechAprilBatch2025\\Masstech Tutorials Core MVC\\DineMasterApi\\DineMasterApi\\Models\\Inventory.cs",
+              "RelativeDocumentMoniker": "DineMasterApi\\Models\\Inventory.cs",
+              "ToolTip": "E:\\Users\\91961\\source\\repos\\MassTechAprilBatch2025\\Masstech Tutorials Core MVC\\DineMasterApi\\DineMasterApi\\Models\\Inventory.cs",
+              "RelativeToolTip": "DineMasterApi\\Models\\Inventory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T15:18:09.579Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Bill.cs",
+              "DocumentMoniker": "E:\\Users\\91961\\source\\repos\\MassTechAprilBatch2025\\Masstech Tutorials Core MVC\\DineMasterApi\\DineMasterApi\\Models\\Bill.cs",
+              "RelativeDocumentMoniker": "DineMasterApi\\Models\\Bill.cs",
+              "ToolTip": "E:\\Users\\91961\\source\\repos\\MassTechAprilBatch2025\\Masstech Tutorials Core MVC\\DineMasterApi\\DineMasterApi\\Models\\Bill.cs",
+              "RelativeToolTip": "DineMasterApi\\Models\\Bill.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBkAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T15:17:58.513Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "OrderItem.cs",
+              "DocumentMoniker": "E:\\Users\\91961\\source\\repos\\MassTechAprilBatch2025\\Masstech Tutorials Core MVC\\DineMasterApi\\DineMasterApi\\Models\\OrderItem.cs",
+              "RelativeDocumentMoniker": "DineMasterApi\\Models\\OrderItem.cs",
+              "ToolTip": "E:\\Users\\91961\\source\\repos\\MassTechAprilBatch2025\\Masstech Tutorials Core MVC\\DineMasterApi\\DineMasterApi\\Models\\OrderItem.cs",
+              "RelativeToolTip": "DineMasterApi\\Models\\OrderItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T15:17:42.985Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "E:\\Users\\91961\\source\\repos\\MassTechAprilBatch2025\\Masstech Tutorials Core MVC\\DineMasterApi\\DineMasterApi\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "DineMasterApi\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "E:\\Users\\91961\\source\\repos\\MassTechAprilBatch2025\\Masstech Tutorials Core MVC\\DineMasterApi\\DineMasterApi\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "DineMasterApi\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T15:09:41.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Order.cs",
+              "DocumentMoniker": "E:\\Users\\91961\\source\\repos\\MassTechAprilBatch2025\\Masstech Tutorials Core MVC\\DineMasterApi\\DineMasterApi\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "DineMasterApi\\Models\\Order.cs",
+              "ToolTip": "E:\\Users\\91961\\source\\repos\\MassTechAprilBatch2025\\Masstech Tutorials Core MVC\\DineMasterApi\\DineMasterApi\\Models\\Order.cs",
+              "RelativeToolTip": "DineMasterApi\\Models\\Order.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAA3wB8AAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T15:17:29.08Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MenuItem.cs",
+              "DocumentMoniker": "E:\\Users\\91961\\source\\repos\\MassTechAprilBatch2025\\Masstech Tutorials Core MVC\\DineMasterApi\\DineMasterApi\\Models\\MenuItem.cs",
+              "RelativeDocumentMoniker": "DineMasterApi\\Models\\MenuItem.cs",
+              "ToolTip": "E:\\Users\\91961\\source\\repos\\MassTechAprilBatch2025\\Masstech Tutorials Core MVC\\DineMasterApi\\DineMasterApi\\Models\\MenuItem.cs",
+              "RelativeToolTip": "DineMasterApi\\Models\\MenuItem.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwBcAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T15:17:15.781Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MenuCategory.cs",
+              "DocumentMoniker": "E:\\Users\\91961\\source\\repos\\MassTechAprilBatch2025\\Masstech Tutorials Core MVC\\DineMasterApi\\DineMasterApi\\Models\\MenuCategory.cs",
+              "RelativeDocumentMoniker": "DineMasterApi\\Models\\MenuCategory.cs",
+              "ToolTip": "E:\\Users\\91961\\source\\repos\\MassTechAprilBatch2025\\Masstech Tutorials Core MVC\\DineMasterApi\\DineMasterApi\\Models\\MenuCategory.cs",
+              "RelativeToolTip": "DineMasterApi\\Models\\MenuCategory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T15:16:50.335Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Reservation.cs",
+              "DocumentMoniker": "E:\\Users\\91961\\source\\repos\\MassTechAprilBatch2025\\Masstech Tutorials Core MVC\\DineMasterApi\\DineMasterApi\\Models\\Reservation.cs",
+              "RelativeDocumentMoniker": "DineMasterApi\\Models\\Reservation.cs",
+              "ToolTip": "E:\\Users\\91961\\source\\repos\\MassTechAprilBatch2025\\Masstech Tutorials Core MVC\\DineMasterApi\\DineMasterApi\\Models\\Reservation.cs",
+              "RelativeToolTip": "DineMasterApi\\Models\\Reservation.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwBoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T15:16:34.055Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "DiningTable.cs",
+              "DocumentMoniker": "E:\\Users\\91961\\source\\repos\\MassTechAprilBatch2025\\Masstech Tutorials Core MVC\\DineMasterApi\\DineMasterApi\\Models\\DiningTable.cs",
+              "RelativeDocumentMoniker": "DineMasterApi\\Models\\DiningTable.cs",
+              "ToolTip": "E:\\Users\\91961\\source\\repos\\MassTechAprilBatch2025\\Masstech Tutorials Core MVC\\DineMasterApi\\DineMasterApi\\Models\\DiningTable.cs",
+              "RelativeToolTip": "DineMasterApi\\Models\\DiningTable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T15:16:17.106Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "User.cs",
+              "DocumentMoniker": "E:\\Users\\91961\\source\\repos\\MassTechAprilBatch2025\\Masstech Tutorials Core MVC\\DineMasterApi\\DineMasterApi\\Models\\User.cs",
+              "RelativeDocumentMoniker": "DineMasterApi\\Models\\User.cs",
+              "ToolTip": "E:\\Users\\91961\\source\\repos\\MassTechAprilBatch2025\\Masstech Tutorials Core MVC\\DineMasterApi\\DineMasterApi\\Models\\User.cs",
+              "RelativeToolTip": "DineMasterApi\\Models\\User.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAgwCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T15:15:59.492Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Role.cs",
+              "DocumentMoniker": "E:\\Users\\91961\\source\\repos\\MassTechAprilBatch2025\\Masstech Tutorials Core MVC\\DineMasterApi\\DineMasterApi\\Models\\Role.cs",
+              "RelativeDocumentMoniker": "DineMasterApi\\Models\\Role.cs",
+              "ToolTip": "E:\\Users\\91961\\source\\repos\\MassTechAprilBatch2025\\Masstech Tutorials Core MVC\\DineMasterApi\\DineMasterApi\\Models\\Role.cs",
+              "RelativeToolTip": "DineMasterApi\\Models\\Role.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T15:15:47.864Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 827,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
