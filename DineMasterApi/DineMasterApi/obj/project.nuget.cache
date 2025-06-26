@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GUfoWGhxd14=",
+  "dgSpecHash": "s+xV7KwcBjQ=",
   "success": true,
-  "projectFilePath": "E:\\Users\\91961\\source\\repos\\MassTechAprilBatch2025\\Masstech Tutorials Core MVC\\DineMasterApi\\DineMasterApi\\DineMasterApi.csproj",
+  "projectFilePath": "E:\\Github\\DineMaster\\DineMasterApi\\DineMasterApi\\DineMasterApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\91961\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\91961\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
