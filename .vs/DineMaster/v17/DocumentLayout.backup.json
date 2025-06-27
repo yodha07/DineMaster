@@ -72,7 +72,8 @@
               "RelativeToolTip": "DineMasterApi\\DineMasterApi\\Models\\OrderItem.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T09:47:32.62Z"
+              "WhenOpened": "2025-06-27T09:47:32.62Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -84,7 +85,8 @@
               "RelativeToolTip": "DineMasterApi\\DineMasterApi\\Models\\Order.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T09:47:58.602Z"
+              "WhenOpened": "2025-06-27T09:47:58.602Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -109,7 +111,8 @@
               "RelativeToolTip": "DineMasterApi\\DineMasterApi\\Models\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T09:51:23.798Z"
+              "WhenOpened": "2025-06-27T09:51:23.798Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -121,7 +124,8 @@
               "RelativeToolTip": "DineMasterApi\\DineMasterApi\\Models\\Bill.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T09:48:00.906Z"
+              "WhenOpened": "2025-06-27T09:48:00.906Z",
+              "EditorCaption": ""
             }
           ]
         },

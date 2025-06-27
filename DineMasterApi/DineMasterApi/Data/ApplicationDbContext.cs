@@ -59,7 +59,7 @@ namespace DineMasterApi.Data
 
             modelBuilder.Entity<DiningTable>()
                 .HasMany(t => t.Orders)
-                .WithOne(o => o.Table)
+                .WithOne(o => o.DiningTable)
                 .HasForeignKey(o => o.TableId)
                 .OnDelete(DeleteBehavior.SetNull);
         }

@@ -9,7 +9,7 @@ namespace DineMasterApi.Models
         public int OrderId { get; set; }
 
         public int? TableId { get; set; }
-        public DiningTable Table { get; set; }
+        public DiningTable DiningTable { get; set; }
 
         [ForeignKey("User")]
         public int UserId { get; set; }

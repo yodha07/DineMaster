@@ -1,4 +1,5 @@
 using DineMasterApi.Data;
+using DineMasterApi.Mapping;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +11,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddAutoMapper(typeof(MappingData));
 
 builder.Services.AddDbContext<ApplicationDbContext>
     (
@@ -18,10 +20,6 @@ builder.Services.AddDbContext<ApplicationDbContext>
             builder.Configuration.GetConnectionString("con")
         )
     );
-
-
-
-
 
 var app = builder.Build();
 
