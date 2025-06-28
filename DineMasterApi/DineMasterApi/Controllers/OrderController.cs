@@ -55,7 +55,8 @@ namespace DineMasterApi.Controllers
         [HttpPost("{orderId}/bill")]
         public async Task<IActionResult> GenerateBill(int orderId, GenerateBillRequestDto req)
         {
-            var order = await db.Orders.Include(o => o.OrderItems).FirstOrDefaultAsync(o => o.OrderId == orderId);
+            var order = await db.Orders.Include(o => o.OrderItems).Include(o => o.Bill)
+                .FirstOrDefaultAsync(o => o.OrderId == orderId);
 
             if (order == null) return NotFound("Order not found");
 
