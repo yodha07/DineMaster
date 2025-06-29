@@ -34,21 +34,13 @@ namespace DineMasterApi.Controllers
                 TableId = dto.TableId,
                 OrderDate = DateTime.Now,
                 OrderStatus = "Pending",
-                OrderItems = new List<OrderItem>()
-            };
-
-            foreach(var item in dto.OrderItems)
-            {
-                var menuItem = await db.MenuItems.FindAsync(item.MenuItemId);
-                if (menuItem == null) return BadRequest($"Menu item with id {menuItem} not available");
-
-                order.OrderItems.Add(new OrderItem
+                OrderItems = dto.OrderItems.Select(item => new OrderItem
                 {
                     MenuItemId = item.MenuItemId,
                     Quantity = item.Quantity,
-                    ItemPrice = menuItem.Price,
-                });
-            }
+                    ItemPrice = db.MenuItems.FirstOrDefault(m => m.ItemId == item.MenuItemId)?.Price ?? 0
+                }).ToList()
+            };
 
             db.Orders.Add(order);
             await db.SaveChangesAsync();
@@ -63,7 +55,8 @@ namespace DineMasterApi.Controllers
         [HttpPost("{orderId}/bill")]
         public async Task<IActionResult> GenerateBill(int orderId, GenerateBillRequestDto req)
         {
-            var order = await db.Orders.Include(o => o.OrderItems).FirstOrDefaultAsync(o => o.OrderId == orderId);
+            var order = await db.Orders.Include(o => o.OrderItems).Include(o => o.Bill)
+                .FirstOrDefaultAsync(o => o.OrderId == orderId);
 
             if (order == null) return NotFound("Order not found");
 
@@ -86,12 +79,12 @@ namespace DineMasterApi.Controllers
                 TotalAmount = total,
                 PaymentMethod = req.PaymentMethod
             };
-            
-                var bill = mapper.Map<Bill>(billDto);
-                db.Bills.Add(bill);
-                await db.SaveChangesAsync();
-                var billRes = mapper.Map<BillDto>(bill);
-                return Ok(billRes);
+
+            var bill = mapper.Map<Bill>(billDto);
+            db.Bills.Add(bill);
+            await db.SaveChangesAsync();
+            var billRes = mapper.Map<BillDto>(bill);
+            return Ok(billRes);
         }
 
         [HttpGet("{orderId}")]
@@ -119,6 +112,8 @@ namespace DineMasterApi.Controllers
                 }).ToList(),
                 Bill = order.Bill == null ? null : new BillDto
                 {
+                    BillId = order.Bill.BillId,
+                    OrderId = order.Bill.OrderId,
                     BillDate = order.Bill.BillDate,
                     Subtotal = order.Bill.Subtotal,
                     Tax = order.Bill.Tax,
@@ -138,6 +133,17 @@ namespace DineMasterApi.Controllers
 
             var orderDtos = mapper.Map<List<OrderDto>>(orders);
             return Ok(orderDtos);
+        }
+
+        [HttpGet("orders/user/{userId}")]
+        public async Task<IActionResult> GetOrdersByUserId(int userId)
+        {
+            var orders = await db.Orders.Include(o => o.OrderItems).ThenInclude(i => i.MenuItem).Include(o => o.Bill).Include(o => o.DiningTable).Where(o => o.UserId == userId).ToListAsync();
+
+            if(!orders.Any()) return NotFound("No orders found for this user");
+
+            var orderDto = mapper.Map<List<OrderDto>>(orders);
+            return Ok(orderDto);
         }
     }
 }

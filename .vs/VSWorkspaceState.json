@@ -3,9 +3,11 @@
     "",
     "\\DineMasterApi",
     "\\DineMasterApi\\DineMasterApi",
+    "\\DineMasterApi\\DineMasterApi\\Controllers",
     "\\DineMasterApi\\DineMasterApi\\Data",
+    "\\DineMasterApi\\DineMasterApi\\DTO",
     "\\DineMasterApi\\DineMasterApi\\Models"
   ],
-  "SelectedNode": "\\DineMasterApi\\DineMasterApi\\Models\\User.cs",
+  "SelectedNode": "\\DineMasterApi\\DineMasterApi\\Controllers\\OrderController.cs",
   "PreviewInSolutionExplorer": false
 }

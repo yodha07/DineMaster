@@ -45,7 +45,7 @@ namespace DineMasterApi.Data
                 .HasForeignKey<DeliveryOTP>(otp => otp.OrderId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            modelBuilder.Entity<User>()
+             modelBuilder.Entity<User>()
                 .HasMany(u => u.Orders)
                 .WithOne(o => o.User)
                 .HasForeignKey(o => o.UserId)
