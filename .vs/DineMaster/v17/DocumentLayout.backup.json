@@ -88,8 +88,7 @@
               "RelativeToolTip": "DineMasterApi\\DineMasterApi\\DTO\\OrderDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T08:47:51.949Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T08:47:51.949Z"
             },
             {
               "$type": "Document",
@@ -101,8 +100,7 @@
               "RelativeToolTip": "DineMasterApi\\DineMasterApi\\DTO\\OrderItemDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T08:44:31.802Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T08:44:31.802Z"
             },
             {
               "$type": "Document",
@@ -114,8 +112,7 @@
               "RelativeToolTip": "DineMasterApi\\DineMasterApi\\DTO\\BillDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T08:40:37.278Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T08:40:37.278Z"
             },
             {
               "$type": "Document",
@@ -125,7 +122,7 @@
               "RelativeDocumentMoniker": "DineMasterApi\\DineMasterApi\\Controllers\\OrderController.cs",
               "ToolTip": "D:\\CsharpProjects\\git\\DineMaster\\DineMasterApi\\DineMasterApi\\Controllers\\OrderController.cs",
               "RelativeToolTip": "DineMasterApi\\DineMasterApi\\Controllers\\OrderController.cs",
-              "ViewState": "AgIAAIYAAAAAAAAAAAAAAIUAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAACwAAAAAAAAAAAAAADgAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-28T07:26:18.607Z",
               "EditorCaption": ""
@@ -164,8 +161,7 @@
               "RelativeToolTip": "DineMasterApi\\DineMasterApi\\Data\\ApplicationDbContext.cs",
               "ViewState": "AgIAACAAAAAAAAAAAAAAACkAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T09:49:30.016Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-27T09:49:30.016Z"
             },
             {
               "$type": "Document",

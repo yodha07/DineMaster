@@ -24,33 +24,41 @@ namespace DineMasterApi.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateOrder(CreateOrderDTO dto)
         {
-            var user = await db.Users.FindAsync(dto.UserId);
-            if (user == null) return BadRequest("Invald user id");
-
-            var order = new Order
+            try
             {
-                UserId = dto.UserId,
-                OrderType = dto.OrderType,
-                TableId = dto.TableId,
-                OrderDate = DateTime.Now,
-                OrderStatus = "Pending",
-                OrderItems = dto.OrderItems.Select(item => new OrderItem
+                var user = await db.Users.FindAsync(dto.UserId);
+                if (user == null) return BadRequest("Invalid user id");
+
+                var order = new Order
                 {
-                    MenuItemId = item.MenuItemId,
-                    Quantity = item.Quantity,
-                    ItemPrice = db.MenuItems.FirstOrDefault(m => m.ItemId == item.MenuItemId)?.Price ?? 0
-                }).ToList()
-            };
+                    UserId = dto.UserId,
+                    OrderType = dto.OrderType,
+                    TableId = dto.TableId,
+                    OrderDate = DateTime.Now,
+                    OrderStatus = "Pending",
+                    OrderItems = dto.OrderItems.Select(item => new OrderItem
+                    {
+                        MenuItemId = item.MenuItemId,
+                        Quantity = item.Quantity,
+                        ItemPrice = db.MenuItems.FirstOrDefault(m => m.ItemId == item.MenuItemId)?.Price ?? 0
+                    }).ToList()
+                };
 
-            db.Orders.Add(order);
-            await db.SaveChangesAsync();
+                db.Orders.Add(order);
+                await db.SaveChangesAsync();
 
-            return Ok(new
+                return Ok(new
+                {
+                    order.OrderId,
+                    Message = "Order placed successfully"
+                });
+            }
+            catch (Exception ex)
             {
-                order.OrderId,
-                Message = "Order placed successfully"
-            });
+                return StatusCode(500, new { error = ex.Message });
+            }
         }
+
 
         [HttpPost("{orderId}/bill")]
         public async Task<IActionResult> GenerateBill(int orderId, GenerateBillRequestDto req)
