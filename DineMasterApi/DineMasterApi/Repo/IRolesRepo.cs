@@ -11,5 +11,8 @@ namespace DineMasterApi.Repo
         Task<Role> UpdateAsync(Role role);
         Task<bool> DeleteAsync(int id);
 
+        Task<Role> GetRoleByNameAsync(string roleName);
+
+
     }
 }

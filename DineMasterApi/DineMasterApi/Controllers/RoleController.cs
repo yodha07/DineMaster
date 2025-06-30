@@ -58,7 +58,7 @@ namespace DineMasterApi.Controllers
             });
         }
 
-        // PUT: api/role
+        
         [HttpPut("UpdateRole")]
         public async Task<ActionResult<RoleDto>> Update(RoleUpdateDto dto)
         {
@@ -73,7 +73,7 @@ namespace DineMasterApi.Controllers
             });
         }
 
-        // DELETE: api/role/5
+        
         [HttpDelete("DeleteRole/{id}")]
         public async Task<IActionResult> Delete(int id)
         {

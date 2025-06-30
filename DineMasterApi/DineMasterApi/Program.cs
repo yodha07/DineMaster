@@ -13,6 +13,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IRolesRepo, RolesService>();
+builder.Services.AddScoped<IUser, UserService>();
 
 
 builder.Services.AddAutoMapper(typeof(MappingData));

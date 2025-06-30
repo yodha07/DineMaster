@@ -7,7 +7,7 @@ namespace DineMasterApi.Service
 {
     public class RolesService : IRolesRepo
     {
-        ApplicationDbContext db;
+       public ApplicationDbContext db;
         public RolesService(ApplicationDbContext db)
         {
             this.db = db;
@@ -53,6 +53,12 @@ namespace DineMasterApi.Service
             db.Roles.Remove(role);
             await db.SaveChangesAsync();
             return true;
+        }
+
+
+        public async Task<Role> GetRoleByNameAsync(string roleName) 
+        {
+            return await db.Roles.FirstOrDefaultAsync(r => r.RoleName == roleName);
         }
 
 
