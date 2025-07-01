@@ -92,7 +92,7 @@ namespace DineMasterApi.Controllers
             db.Bills.Add(bill);
             await db.SaveChangesAsync();
             var billRes = mapper.Map<BillDto>(bill);
-            return Ok(billRes);
+            return Ok(new { billRes });
         }
 
         [HttpGet("{orderId}")]
@@ -146,12 +146,29 @@ namespace DineMasterApi.Controllers
         [HttpGet("orders/user/{userId}")]
         public async Task<IActionResult> GetOrdersByUserId(int userId)
         {
-            var orders = await db.Orders.Include(o => o.OrderItems).ThenInclude(i => i.MenuItem).Include(o => o.Bill).Include(o => o.DiningTable).Where(o => o.UserId == userId).ToListAsync();
+            var orders = await db.Orders.Where(o => o.UserId == userId && o.Bill != null).Include(o => o.OrderItems).ThenInclude(i => i.MenuItem).Include(o => o.Bill).Include(o => o.DiningTable).ToListAsync();
 
             if (!orders.Any()) return NotFound("No orders found for this user");
 
             var orderDto = mapper.Map<List<OrderDto>>(orders);
             return Ok(orderDto);
+        }
+
+        [HttpGet("Allorders/user/{userId}")]
+        public async Task<IActionResult> GetOrdersByUserIdAll(int userId)
+        {
+            var orders = await db.Orders
+    .Where(o => o.UserId == userId && o.Bill == null)
+    .Include(o => o.OrderItems)
+        .ThenInclude(i => i.MenuItem)
+    .Include(o => o.Bill)
+    .Include(o => o.DiningTable)
+    .ToListAsync();
+
+            if (!orders.Any()) return NotFound("No orders found for this user");
+
+            var orderDto = mapper.Map<List<OrderDto>>(orders);
+            return Ok(new { orderDto });
         }
 
         [HttpGet("orders/getMenu")]
