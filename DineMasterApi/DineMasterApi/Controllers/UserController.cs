@@ -21,10 +21,10 @@ namespace DineMasterApi.Controllers
 
 
 
-        [HttpPost("Register")]
+        [HttpPost("UserRegister")]
         public async Task<ActionResult<UserDto>> Register(UserRegisterDto dto)
         {
-            var role = await repo.GetRoleByNameAsync("Customer");
+            var role = await repo.GetRoleByNameAsync("User");
             if (role == null) return BadRequest("Default role not found.");
 
             var user = new User
@@ -50,7 +50,7 @@ namespace DineMasterApi.Controllers
             });
         }
 
-        [HttpPost("AddStaff")]
+        [HttpPost("AdminUserAddStaff")]
         public async Task<ActionResult<UserDto>> AddStaff(UserAdminCreateDto dto)
         {
             var user = new User
@@ -76,7 +76,7 @@ namespace DineMasterApi.Controllers
             });
         }
 
-        [HttpGet]
+        [HttpGet("FetchAllUsers")]
         public async Task<ActionResult<IEnumerable<UserDto>>> GetAll()
         {
             var users = await urepo.GetAllUsersAsync();
@@ -91,7 +91,7 @@ namespace DineMasterApi.Controllers
             }));
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("GetUserByID/{id}")]
         public async Task<ActionResult<UserDto>> GetById(int id)
         {
             var u = await urepo.GetUserByIdAsync(id);
@@ -108,7 +108,7 @@ namespace DineMasterApi.Controllers
             });
         }
 
-        [HttpPut]
+        [HttpPut("UserUpdate")]
         public async Task<ActionResult<UserDto>> Update(UserUpdateDto dto)
         {
             var updatedUser = await urepo.UpdateUserAsync(new User
@@ -135,7 +135,7 @@ namespace DineMasterApi.Controllers
             });
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("UserDelete/{id}")]
         public async Task<IActionResult> Delete(int id)
         {
             var result = await urepo.DeleteUserAsync(id);
