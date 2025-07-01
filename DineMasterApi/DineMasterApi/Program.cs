@@ -16,6 +16,9 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IRolesRepo, RolesService>();
 builder.Services.AddScoped<IUser, UserService>();
 
+builder.Services.AddScoped<ITableRepo, TableService>();
+builder.Services.AddScoped<IReservationRepo, ReservationService>();
+
 
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession(options =>
