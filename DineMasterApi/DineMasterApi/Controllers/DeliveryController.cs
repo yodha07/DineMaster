@@ -13,7 +13,7 @@ namespace DineMasterApi.Controllers
     public class DeliveryController : ControllerBase
     {
         ApplicationDbContext db;
-        public DeliveryController(ApplicationDbContext db) 
+        public DeliveryController(ApplicationDbContext db)
         {
             this.db = db;
         }
@@ -61,7 +61,7 @@ namespace DineMasterApi.Controllers
                 City = address.City,
                 State = address.State,
                 Pincode = address.Pincode,
-                
+
             };
 
             return Ok(dto);
@@ -74,14 +74,14 @@ namespace DineMasterApi.Controllers
             var data = await db.DeliveryAddresses
                                          .FirstOrDefaultAsync(x => x.AddressId == dto.AddressId);
 
-            if (data == null) 
+            if (data == null)
                 return NotFound("Address not found");
 
             data.FullAddress = dto.FullAddress;
             data.City = dto.City;
             data.State = dto.State;
             data.Pincode = dto.Pincode;
-          
+
             await db.SaveChangesAsync();
             return Ok("Delivery address updated successfully.");
         }
@@ -99,6 +99,69 @@ namespace DineMasterApi.Controllers
 
             return Ok("Delivery address deleted successfully.");
         }
+
+
+        [HttpPut]
+        [Route("status/{orderId}")]
+        public async Task<IActionResult> UpdateStatus(int orderId, string status)
+        {
+            var order = await db.Orders.FindAsync(orderId);
+            if (order == null) return NotFound();
+
+            db.DeliveryTrackings.Add(new DeliveryTracking
+            {
+                OrderId = orderId,
+                Status = status,
+                UpdatedAt = DateTime.Now
+            });
+
+            if (status == "Out for Delivery")
+            {
+                var otp = new Random().Next(100000, 999999).ToString();
+                HttpContext.Session.SetString($"OTP_{orderId}", otp);
+
+                // Simulate sending
+                Console.WriteLine($"OTP for Order #{orderId}: {otp}");
+            }
+
+            await db.SaveChangesAsync();
+            return Ok($"Status '{status}' added.");
+        }
+
+        [HttpGet]
+        [Route ("status/latest/{orderId}")]
+        public async Task<IActionResult> GetLatestStatus(int orderId)
+        {
+            var status = await db.DeliveryTrackings.Where(x => x.OrderId == orderId).
+                OrderByDescending(x => x.UpdatedAt).FirstOrDefaultAsync();
+
+            if(status == null) return NotFound();
+            return Ok(status);
+        }
+
+        [HttpPost]
+        [Route("verify-delivery")]
+        public async Task<IActionResult> VerifyOtp([FromBody] OtpVerifyDTO dto)
+        {
+            var order = await db.Orders.FindAsync(dto.OrderId);
+            if (order == null) return NotFound();
+
+            var sessionOtp = HttpContext.Session.GetString($"OTP_{dto.OrderId}");
+
+            if (sessionOtp == null) return BadRequest("OTP expired or not generated.");
+
+            if (sessionOtp == dto.Otp)
+            {
+                order.OrderStatus = "Delivered";
+                HttpContext.Session.Remove($"OTP_{dto.OrderId}");
+
+                await db.SaveChangesAsync();
+                return Ok("OTP verified. Order marked as delivered.");
+            }
+
+            return BadRequest("Invalid OTP.");
+        }
+
     }
 }
     

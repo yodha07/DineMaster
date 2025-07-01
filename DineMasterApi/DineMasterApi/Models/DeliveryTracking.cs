@@ -16,5 +16,7 @@ namespace DineMasterApi.Models
         public string Status { get; set; }
 
         public DateTime UpdatedAt { get; set; }
+
+
     }
 }
