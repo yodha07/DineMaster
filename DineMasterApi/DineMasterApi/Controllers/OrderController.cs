@@ -148,10 +148,69 @@ namespace DineMasterApi.Controllers
         {
             var orders = await db.Orders.Include(o => o.OrderItems).ThenInclude(i => i.MenuItem).Include(o => o.Bill).Include(o => o.DiningTable).Where(o => o.UserId == userId).ToListAsync();
 
-            if(!orders.Any()) return NotFound("No orders found for this user");
+            if (!orders.Any()) return NotFound("No orders found for this user");
 
             var orderDto = mapper.Map<List<OrderDto>>(orders);
             return Ok(orderDto);
+        }
+
+        [HttpGet("orders/getMenu")]
+        public async Task<IActionResult> GetAllMenuItems()
+        {
+            var menuItems = await db.MenuItems
+                .Include(m => m.Category)
+                .Where(m => m.IsAvailable)
+                .ToListAsync();
+
+            var menuItemDtos = mapper.Map < List<MenuItemDto>>(menuItems);
+            return Ok(menuItemDtos);
+        }
+
+        [HttpPost("cart/add")]
+        public async Task<IActionResult> AddToCart(AddToCartDto dto)
+        {
+            //var userExists = await db.Users.AnyAsync(u => u.UserId == dto.UserId);
+            var itemExists = await db.MenuItems.AnyAsync(m => m.ItemId == dto.MenuItemId);
+
+            var existingItem = await db.CartItems.FirstOrDefaultAsync(c => c.UserId == dto.UserId && c.MenuItemId == dto.MenuItemId);
+
+            if (existingItem != null)
+            {
+                existingItem.Quantity += dto.Quantity;
+            }
+            else
+            {
+                var newCartItem = new CartItem
+                {
+                    UserId = 2,
+                    MenuItemId = dto.MenuItemId,
+                    Quantity = dto.Quantity
+                };
+                db.CartItems.Add(newCartItem);
+            }
+
+            await db.SaveChangesAsync();
+            return Ok("Item added");
+        }
+
+        [HttpGet("cart/{userId}")]
+        public async Task<IActionResult> GetCartItems(int userId)
+        {
+            var cartItems = await db.CartItems.Where(c => c.UserId == userId)
+              .Include(c => c.MenuItem)
+              .ToListAsync();
+
+            var cartDtos = cartItems.Select(item => new CartItemDto
+            {
+                CartItemId = item.CartItemId,
+                MenuItemId = item.MenuItemId,
+                MenuItemName = item.MenuItem.Name,
+                ItemPrice = item.MenuItem.Price,
+                Quantity = item.Quantity,
+                TotalPrice = item.MenuItem.Price * item.Quantity
+            }).ToList();
+
+            return Ok(cartDtos);
         }
     }
 }
