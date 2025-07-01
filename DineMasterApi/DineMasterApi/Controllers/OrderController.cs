@@ -169,29 +169,26 @@ namespace DineMasterApi.Controllers
         [HttpPost("cart/add")]
         public async Task<IActionResult> AddToCart(AddToCartDto dto)
         {
-            //var userExists = await db.Users.AnyAsync(u => u.UserId == dto.UserId);
-            var itemExists = await db.MenuItems.AnyAsync(m => m.ItemId == dto.MenuItemId);
-
-            var existingItem = await db.CartItems.FirstOrDefaultAsync(c => c.UserId == dto.UserId && c.MenuItemId == dto.MenuItemId);
-
-            if (existingItem != null)
+            try
             {
-                existingItem.Quantity += dto.Quantity;
-            }
-            else
-            {
-                var newCartItem = new CartItem
+                var cartItem = new CartItem
                 {
-                    UserId = 2,
+                    UserId = dto.UserId,
                     MenuItemId = dto.MenuItemId,
                     Quantity = dto.Quantity
                 };
-                db.CartItems.Add(newCartItem);
-            }
 
-            await db.SaveChangesAsync();
-            return Ok("Item added");
+                db.CartItems.Add(cartItem);
+                await db.SaveChangesAsync();
+
+                return Ok(new { Message = "Item added to cart" });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { Error = ex.Message, StackTrace = ex.StackTrace });
+            }
         }
+
 
         [HttpGet("cart/{userId}")]
         public async Task<IActionResult> GetCartItems(int userId)
