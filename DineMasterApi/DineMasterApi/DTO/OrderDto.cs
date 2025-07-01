@@ -7,6 +7,9 @@
         public string Status { get; set; }
         public int TableId { get; set; }
         public string TableName { get; set; }
+
+        public string? OrderType { get; set; }
+        public string? OrderedBy { get; set; }
         public List<OrderItemDto> OrderItems { get; set; }
         public BillDto Bill { get; set; }
     }
