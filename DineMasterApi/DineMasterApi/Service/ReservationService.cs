@@ -31,13 +31,13 @@ namespace DineMasterApi.Service
             await db.SaveChangesAsync();
 
             MailMessage mail = new MailMessage();
-            mail.From = new MailAddress("kstesterjune@gmail.com");
+            mail.From = new MailAddress("sk192196@gmail.com");
             mail.To.Add(reservation.Contact);
             mail.Subject = "Table Reservation Details";
             mail.Body = $"Dear {reservation.CustomerName},\n\nYour Table Reservation Details: Table: {reservation.TableId}, Slot: {reservation.StartTime}-{reservation.EndTime} and Guest Counts: {reservation.GuestsCount}.\n\nRegards,\nDineMaster";
 
             SmtpClient smtp = new SmtpClient("smtp.gmail.com");
-            smtp.Credentials = new NetworkCredential("kstesterjune@gmail.com", "dfmjyqbqfmuqqqdm");
+            smtp.Credentials = new NetworkCredential("sk192196@gmail.com", "etbq ouad pzgu ockt");
             smtp.Port = 587;
             smtp.EnableSsl = true;
             smtp.Send(mail);
