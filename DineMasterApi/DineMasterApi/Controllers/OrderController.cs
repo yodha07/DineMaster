@@ -24,33 +24,41 @@ namespace DineMasterApi.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateOrder(CreateOrderDTO dto)
         {
-            var user = await db.Users.FindAsync(dto.UserId);
-            if (user == null) return BadRequest("Invald user id");
-
-            var order = new Order
+            try
             {
-                UserId = dto.UserId,
-                OrderType = dto.OrderType,
-                TableId = dto.TableId,
-                OrderDate = DateTime.Now,
-                OrderStatus = "Pending",
-                OrderItems = dto.OrderItems.Select(item => new OrderItem
+                var user = await db.Users.FindAsync(dto.UserId);
+                if (user == null) return BadRequest("Invalid user id");
+
+                var order = new Order
                 {
-                    MenuItemId = item.MenuItemId,
-                    Quantity = item.Quantity,
-                    ItemPrice = db.MenuItems.FirstOrDefault(m => m.ItemId == item.MenuItemId)?.Price ?? 0
-                }).ToList()
-            };
+                    UserId = dto.UserId,
+                    OrderType = dto.OrderType,
+                    TableId = dto.TableId,
+                    OrderDate = DateTime.Now,
+                    OrderStatus = "Pending",
+                    OrderItems = dto.OrderItems.Select(item => new OrderItem
+                    {
+                        MenuItemId = item.MenuItemId,
+                        Quantity = item.Quantity,
+                        ItemPrice = db.MenuItems.FirstOrDefault(m => m.ItemId == item.MenuItemId)?.Price ?? 0
+                    }).ToList()
+                };
 
-            db.Orders.Add(order);
-            await db.SaveChangesAsync();
+                db.Orders.Add(order);
+                await db.SaveChangesAsync();
 
-            return Ok(new
+                return Ok(new
+                {
+                    order.OrderId,
+                    Message = "Order placed successfully"
+                });
+            }
+            catch (Exception ex)
             {
-                order.OrderId,
-                Message = "Order placed successfully"
-            });
+                return StatusCode(500, new { error = ex.Message });
+            }
         }
+
 
         [HttpPost("{orderId}/bill")]
         public async Task<IActionResult> GenerateBill(int orderId, GenerateBillRequestDto req)
@@ -140,10 +148,66 @@ namespace DineMasterApi.Controllers
         {
             var orders = await db.Orders.Include(o => o.OrderItems).ThenInclude(i => i.MenuItem).Include(o => o.Bill).Include(o => o.DiningTable).Where(o => o.UserId == userId).ToListAsync();
 
-            if(!orders.Any()) return NotFound("No orders found for this user");
+            if (!orders.Any()) return NotFound("No orders found for this user");
 
             var orderDto = mapper.Map<List<OrderDto>>(orders);
             return Ok(orderDto);
+        }
+
+        [HttpGet("orders/getMenu")]
+        public async Task<IActionResult> GetAllMenuItems()
+        {
+            var menuItems = await db.MenuItems
+                .Include(m => m.Category)
+                .Where(m => m.IsAvailable)
+                .ToListAsync();
+
+            var menuItemDtos = mapper.Map < List<MenuItemDto>>(menuItems);
+            return Ok(menuItemDtos);
+        }
+
+        [HttpPost("cart/add")]
+        public async Task<IActionResult> AddToCart(AddToCartDto dto)
+        {
+            try
+            {
+                var cartItem = new CartItem
+                {
+                    UserId = dto.UserId,
+                    MenuItemId = dto.MenuItemId,
+                    Quantity = dto.Quantity
+                };
+
+                db.CartItems.Add(cartItem);
+                await db.SaveChangesAsync();
+
+                return Ok(new { Message = "Item added to cart" });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { Error = ex.Message, StackTrace = ex.StackTrace });
+            }
+        }
+
+
+        [HttpGet("cart/{userId}")]
+        public async Task<IActionResult> GetCartItems(int userId)
+        {
+            var cartItems = await db.CartItems.Where(c => c.UserId == userId)
+              .Include(c => c.MenuItem)
+              .ToListAsync();
+
+            var cartDtos = cartItems.Select(item => new CartItemDto
+            {
+                CartItemId = item.CartItemId,
+                MenuItemId = item.MenuItemId,
+                MenuItemName = item.MenuItem.Name,
+                ItemPrice = item.MenuItem.Price,
+                Quantity = item.Quantity,
+                TotalPrice = item.MenuItem.Price * item.Quantity
+            }).ToList();
+
+            return Ok(cartDtos);
         }
     }
 }

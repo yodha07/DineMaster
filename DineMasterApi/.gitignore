@@ -1,43 +1,41 @@
-## Build results
+# === ASP.NET / .NET Core ===
 bin/
 obj/
+*.dll
+*.exe
+*.pdb
+*.app
+*.dbmdl
+*.log
+*.tlog
+*.tmp
+*.bak
+*.swp
+*~
 
-## User-specific files
+# === EF Core ===
+Migrations/
+
+# === User-specific & IDE ===
 *.user
 *.suo
 *.userosscache
 *.sln.docstates
-
-## Visual Studio Code
+*.vs/
 .vscode/
-.history/
-
-## Rider
 .idea/
+_ReSharper*/
+*.DotSettings.user
 
-## OS generated files
-.DS_Store
-Thumbs.db
-
-## ASP.NET Scaffolding
+# === IIS & Configs ===
+*.config
 ScaffoldingReadMe.txt
 
-## dotnet CLI
-*.dbmdl
-*.log
-*.pdb
-
-## Entity Framework
-Migrations/
-
-## Logs
+# === Logs ===
 logs/
 *.log
-*.tlog
-*.vspscc
-*.vssscc
 
-## NuGet
+# === NuGet ===
 *.nupkg
 *.snupkg
 .nuget/
@@ -45,38 +43,35 @@ packages/
 project.lock.json
 project.fragment.lock.json
 
-## Transient files
-*.tmp
-*.bak
-*.swp
-*~
-
-## Publish outputs
-wwwroot/
+# === Publish Outputs ===
 publish/
+wwwroot/
 dist/
 out/
 
-## Secrets and settings
+# === Secrets & Settings ===
 appsettings.Development.json
+appsettings.Local.json
 secrets.json
 
-## IIS
-*.vs/
-*.config
-
-## Others
-_ReSharper*/
-*.DotSettings.user
+# === Angular (CLI, Vite, Nx, etc.) ===
 node_modules/
 npm-debug.log
 yarn-error.log
+pnpm-lock.yaml
+.angular/
+.angular/cache/
+.angular/config/
+angular.json
+.env
+.env.*.local
 
-## JetBrains Rider
-.idea/
-
-# Optional: ignore test coverage outputs
+# === Test & Coverage ===
 coverage/
 TestResults/
 *.coverage
 *.coveragexml
+
+# === OS / File System ===
+.DS_Store
+Thumbs.db

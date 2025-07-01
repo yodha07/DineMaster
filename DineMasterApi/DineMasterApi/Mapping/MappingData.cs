@@ -14,6 +14,9 @@ namespace DineMasterApi.Mapping
             CreateMap<OrderItem, OrderItemDto>()
                 .ForMember(dest => dest.MenuItemName, opt => opt.MapFrom(src => src.MenuItem.Name));
             CreateMap<Bill, BillDto>().ReverseMap();
+
+            CreateMap<MenuItem, MenuItemDto>()
+                .ForMember(dest => dest.CategoryName, opt => opt.MapFrom(src => src.Category.CategoryName));
         }
     }
 }
