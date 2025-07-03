@@ -4,25 +4,139 @@
   <thead class="thead-dark">
     <tr>
       <th scope="col">AddressId</th>
-      <th scope="col">User</th>
+      <th scope="col">UserId</th>
       <th scope="col">Full Address</th>
       <th scope="col">Pincode</th>
       <th scope="col">City</th>
       <th scope="col">State</th>
       <th scope="col">Landmark</th>
+      <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let i of fetchaddress">
-      <th scope="row">{{i.addressId}}</th>
-      <td>{{i.user}}</td>
-      <td>{{i.fullAddress}}</td>
-      <td>{{i.pincode}}</td>
-      <td>{{i.city}}</td>
-      <td>{{i.state}}</td>
-      <td>{{i.landmark}}</td>
+      <th scope="row">{{ i.addressId }}</th>
+      <td>{{ i.userId }}</td>
+      <td>{{ i.fullAddress }}</td>
+      <td>{{ i.pincode }}</td>
+      <td>{{ i.city }}</td>
+      <td>{{ i.state }}</td>
+      <td>{{ i.landmark }}</td>
+      <td>
+        <button class="btn btn-danger" (click)="deleteAddress(i.addressId)">Delete</button>
+        <button class="btn btn-success" (click)="EditDeliveryAddId(i)" data-toggle="modal" data-target="#exampleModal2">Edit</button>
+      </td>
     </tr>
-   
   </tbody>
 </table>
 
+<!-- ✅ Add Modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Add Delivery
+</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Add Delivery Address</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <form [formGroup]="address" (ngSubmit)="AddDeliveryAdd(address.value)">
+        <div class="modal-body">
+          <div class="form-group">
+            <label>Full Address</label>
+            <input type="text" class="form-control" formControlName="fullAddress" placeholder="Enter Address" required>
+          </div>
+
+          <div class="form-group">
+            <label>Pincode</label>
+            <input type="text" class="form-control" formControlName="pincode" placeholder="Enter Pincode" required>
+          </div>
+
+          <div class="form-group">
+            <label>City</label>
+            <input type="text" class="form-control" formControlName="city" placeholder="Enter City" required>
+          </div>
+
+          <div class="form-group">
+            <label>State</label>
+            <input type="text" class="form-control" formControlName="state" placeholder="Enter State" required>
+          </div>
+
+          <div class="form-group">
+            <label>Landmark</label>
+            <input type="text" class="form-control" formControlName="landmark" placeholder="Enter Landmark" required>
+          </div>
+
+          <input type="hidden" formControlName="userId" />
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Save Address</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+<!-- ✅ Edit Modal -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Edit Delivery Address</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <form [formGroup]="address" (ngSubmit)="EditDeliveryAdd()">
+        <div class="modal-body">
+
+          <div class="form-group">
+            <label>Full Address</label>
+            <input type="text" class="form-control" formControlName="fullAddress" placeholder="Enter Address" required>
+          </div>
+
+          <div class="form-group">
+            <label>Pincode</label>
+            <input type="text" class="form-control" formControlName="pincode" placeholder="Enter Pincode" required>
+          </div>
+
+          <div class="form-group">
+            <label>City</label>
+            <input type="text" class="form-control" formControlName="city" placeholder="Enter City" required>
+          </div>
+
+          <div class="form-group">
+            <label>State</label>
+            <input type="text" class="form-control" formControlName="state" placeholder="Enter State" required>
+          </div>
+
+          <div class="form-group">
+            <label>Landmark</label>
+            <input type="text" class="form-control" formControlName="landmark" placeholder="Enter Landmark" required>
+          </div>
+
+          <input type="hidden" formControlName="userId" />
+          <input type="hidden" formControlName="addressId" />
+
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Save Changes</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>

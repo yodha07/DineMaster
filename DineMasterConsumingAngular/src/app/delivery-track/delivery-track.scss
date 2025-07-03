@@ -1,0 +1,33 @@
+.progress-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.stage {
+  width: 100px;
+  text-align: center;
+  font-weight: bold;
+  padding: 8px;
+  border-radius: 50%;
+  background-color: #ccc;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.line {
+  flex: 1;
+  height: 4px;
+  background-color: #ccc;
+  margin: 0 5px;
+  transition: 0.3s;
+}
+
+.stage.active {
+  background-color: #28a745;
+}
+
+.line.active {
+  background-color: #28a745;
+}

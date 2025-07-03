@@ -34,7 +34,7 @@ namespace DineMasterApi.Controllers
             await db.DeliveryAddresses.AddAsync(data);
             await db.SaveChangesAsync();
 
-            return Ok("Delivery Address Addedd Successfully");
+            return Ok( new {message= "Delivery Address Addedd Successfully" });
         }
 
         [HttpGet]
@@ -119,8 +119,6 @@ namespace DineMasterApi.Controllers
             {
                 var otp = new Random().Next(100000, 999999).ToString();
                 HttpContext.Session.SetString($"OTP_{orderId}", otp);
-
-                // Simulate sending
                 Console.WriteLine($"OTP for Order #{orderId}: {otp}");
             }
 

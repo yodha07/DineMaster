@@ -1,0 +1,34 @@
+<h4 class="mb-4">Delivery Tracker - Order ID {{orderId}}</h4>
+
+<!-- ✅ PROGRESS BAR -->
+<div class="progress-container mb-4">
+  <div class="stage" [ngClass]="{ 'active': isStage('Initiated') }">Initiated</div>
+  <div class="line" [ngClass]="{ 'active': isStage('In Process') || isStage('Out for Delivery') || isStage('Delivered') }"></div>
+  <div class="stage" [ngClass]="{ 'active': isStage('In Process') }">In Process</div>
+  <div class="line" [ngClass]="{ 'active': isStage('Out for Delivery') || isStage('Delivered') }"></div>
+  <div class="stage" [ngClass]="{ 'active': isStage('Out for Delivery') }">Out for Delivery</div>
+  <div class="line" [ngClass]="{ 'active': isStage('Delivered') }"></div>
+  <div class="stage" [ngClass]="{ 'active': isStage('Delivered') }">Delivered</div>
+</div>
+
+<!-- ✅ STATUS INFO -->
+<div *ngIf="statusInfo">
+  <p><b>Status:</b> {{ statusInfo.status }}</p>
+  <p><b>Updated:</b> {{ statusInfo.updatedAt | date:'short' }}</p>
+</div>
+
+<!-- ✅ ACTION BUTTONS -->
+<div class="mb-4">
+  <button class="btn btn-primary" (click)="updateDeliveryStatus('Initiated')">Initiate</button>
+  <button class="btn btn-warning" (click)="updateDeliveryStatus('In Process')">Process</button>
+  <button class="btn btn-info" (click)="updateDeliveryStatus('Out for Delivery')">Dispatch</button>
+</div>
+
+<!-- ✅ OTP VERIFICATION -->
+<form [formGroup]="otpForm" (ngSubmit)="verifyDeliveryOtp(otpForm.value)">
+  <div class="form-group">
+    <label>Enter OTP to confirm delivery:</label>
+    <input type="text" formControlName="otp" placeholder="Enter OTP" class="form-control w-50 mb-2" />
+    <button class="btn btn-success" type="submit">Verify OTP</button>
+  </div>
+</form>

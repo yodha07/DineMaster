@@ -17,8 +17,6 @@ namespace DineMasterApi.Controllers
         }
 
 
-
-        
         [HttpGet("GetAllRoles")]
         public async Task<ActionResult<IEnumerable<RoleDto>>> GetAll()
         {
@@ -30,7 +28,7 @@ namespace DineMasterApi.Controllers
             }));
         }
 
-        
+
         [HttpGet("GetById/{id}")]
         public async Task<ActionResult<RoleDto>> GetById(int id)
         {
@@ -44,7 +42,7 @@ namespace DineMasterApi.Controllers
             });
         }
 
-        
+
         [HttpPost("AddRole")]
         public async Task<ActionResult<RoleDto>> Create(RoleCreateDto dto)
         {
@@ -58,7 +56,7 @@ namespace DineMasterApi.Controllers
             });
         }
 
-        
+
         [HttpPut("UpdateRole")]
         public async Task<ActionResult<RoleDto>> Update(RoleUpdateDto dto)
         {
@@ -73,7 +71,7 @@ namespace DineMasterApi.Controllers
             });
         }
 
-        
+
         [HttpDelete("DeleteRole/{id}")]
         public async Task<IActionResult> Delete(int id)
         {

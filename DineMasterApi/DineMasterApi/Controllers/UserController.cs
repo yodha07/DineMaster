@@ -11,8 +11,8 @@ namespace DineMasterApi.Controllers
     public class UserController : ControllerBase
     {
 
-       public IRolesRepo repo;
-       public IUser urepo;
+        public IRolesRepo repo;
+        public IUser urepo;
         public UserController(IRolesRepo repo, IUser urepo)
         {
             this.repo = repo;
