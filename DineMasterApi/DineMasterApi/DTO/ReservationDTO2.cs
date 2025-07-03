@@ -1,11 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-
-namespace DineMasterApi.Models
+﻿namespace DineMasterApi.DTO
 {
-    public class Reservation
+    public class ReservationDTO2
     {
-        [Key]
         public int ReservationId { get; set; }
         public string CustomerName { get; set; }
         public string Contact { get; set; }
@@ -14,14 +10,12 @@ namespace DineMasterApi.Models
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
         public int TableId { get; set; }
-        public decimal? TotalAmount { get; set; }
-        public bool? IsPaid { get; set; }
+        public string Tname { get; set; }
+        public decimal TotalAmount { get; set; }
+        public bool IsPaid { get; set; }
         public DateTime CreatedAt { get; set; }
         public string CreatedBy { get; set; }
         public DateTime? ModifiedAt { get; set; }
         public string? ModifiedBy { get; set; }
-
-        [ForeignKey("TableId")]
-        public Table Table { get; set; }
     }
 }

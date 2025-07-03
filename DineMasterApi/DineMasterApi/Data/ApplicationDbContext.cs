@@ -15,8 +15,8 @@ namespace DineMasterApi.Data
 
         public DbSet<Role> Roles { get; set; }
         public DbSet<User> Users { get; set; }
-        public DbSet<DiningTable> DiningTables { get; set; }
-        public DbSet<Reservation> Reservations { get; set; }
+      //  public DbSet<DiningTable> DiningTables { get; set; }
+       // public DbSet<Reservation> Reservations { get; set; }
         public DbSet<MenuCategory> MenuCategories { get; set; }
         public DbSet<MenuItem> MenuItems { get; set; }
         public DbSet<Order> Orders { get; set; }
@@ -28,7 +28,10 @@ namespace DineMasterApi.Data
         public DbSet<DeliveryTracking> DeliveryTrackings { get; set; }
         public DbSet<DeliveryOTP> DeliveryOTPs { get; set; }
         public DbSet<CartItem> CartItems { get; set; }
+        public DbSet<RecipeItem> RecipeItems { get; set; }
 
+        public DbSet<Table> Tables { get; set; }
+        public DbSet<Reservation> Reservations { get; set; }
 
 
 
@@ -58,11 +61,18 @@ namespace DineMasterApi.Data
                 .HasForeignKey(u => u.RoleId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            modelBuilder.Entity<DiningTable>()
-                .HasMany(t => t.Orders)
-                .WithOne(o => o.DiningTable)
-                .HasForeignKey(o => o.TableId)
-                .OnDelete(DeleteBehavior.SetNull);
+            //modelBuilder.Entity<DiningTable>()
+            //    .HasMany(t => t.Orders)
+            //    .WithOne(o => o.DiningTable)
+            //    .HasForeignKey(o => o.TableId)
+            //    .OnDelete(DeleteBehavior.SetNull);
+
+            //Reservation-Table
+            modelBuilder.Entity<Reservation>()
+                .HasOne(r => r.Table)
+                .WithMany(t => t.Reservations)
+                .HasForeignKey(r => r.TableId)
+                .OnDelete(DeleteBehavior.Restrict);
         }
 
 
