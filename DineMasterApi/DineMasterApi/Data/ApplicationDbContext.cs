@@ -28,7 +28,7 @@ namespace DineMasterApi.Data
         public DbSet<DeliveryTracking> DeliveryTrackings { get; set; }
         public DbSet<DeliveryOTP> DeliveryOTPs { get; set; }
         public DbSet<CartItem> CartItems { get; set; }
-
+        public DbSet<RecipeItem> RecipeItems { get; set; }
 
         public DbSet<Table> Tables { get; set; }
         public DbSet<Reservation> Reservations { get; set; }

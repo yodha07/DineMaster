@@ -15,6 +15,9 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IRolesRepo, RolesService>();
 builder.Services.AddScoped<IUser, UserService>();
+builder.Services.AddScoped<IInventory, InventoryServices>();
+builder.Services.AddScoped<IRecipeitem, RecipeitemServices>();
+builder.Services.AddScoped<IExpense, ExpenseService>();
 
 builder.Services.AddScoped<ITableRepo, TableService>();
 builder.Services.AddScoped<IReservationRepo, ReservationService>();

@@ -62,6 +62,7 @@ namespace DineMasterApi.Controllers
 
         [HttpPost("{orderId}/bill")]
         public async Task<IActionResult> GenerateBill(int orderId, GenerateBillRequestDto req)
+        
         {
             var order = await db.Orders.Include(o => o.OrderItems).Include(o => o.Bill)
                 .FirstOrDefaultAsync(o => o.OrderId == orderId);
@@ -92,7 +93,14 @@ namespace DineMasterApi.Controllers
             db.Bills.Add(bill);
             await db.SaveChangesAsync();
             var billRes = mapper.Map<BillDto>(bill);
-            return Ok(new { billRes });
+
+            var toDel = await db.CartItems.FirstOrDefaultAsync(c => c.UserId == 2);
+            if (toDel != null)
+            {
+                db.CartItems.Remove(toDel);
+            }
+            //return Ok(new { billRes });
+            return Ok(new { message = "Bill generated" });
         }
 
         [HttpGet("{orderId}")]

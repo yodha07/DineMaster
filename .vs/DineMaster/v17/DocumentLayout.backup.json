@@ -90,7 +90,7 @@
               "RelativeDocumentMoniker": "DineMasterApi\\DineMasterApi\\appsettings.json",
               "ToolTip": "D:\\CsharpProjects\\git\\DineMaster\\DineMasterApi\\DineMasterApi\\appsettings.json",
               "RelativeToolTip": "DineMasterApi\\DineMasterApi\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-06-30T14:56:04.566Z",
               "EditorCaption": ""
@@ -141,8 +141,7 @@
               "RelativeToolTip": "DineMasterApi\\DineMasterApi\\Controllers\\OrderController.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAAADQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T07:26:18.607Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T07:26:18.607Z"
             },
             {
               "$type": "Document",
